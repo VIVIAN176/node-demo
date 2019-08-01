@@ -20,8 +20,10 @@ var server = http.createServer(function (request, response) {
     /******** 从这里开始看，上面不要看 ************/
 
     console.log('方方说：含查询字符串的路径\n' + pathWithQuery)
-
-    // if (path === '/') {
+    if (!port) {
+        console.log('请指定端口好不啦\nnode server.js 888 这样不会吗')
+        process.exit(1);
+    }    // if (path === '/') {
     //     response.statusCode = 200
     //     response.setHeader('Content-Type', 'text/html;charset=utf-8')
     //     response.write('哈哈哈')
