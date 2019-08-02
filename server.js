@@ -40,7 +40,7 @@ var server = http.createServer(function (request, response) {
         response.statusCode = 200
         response.setHeader('Content-Type', 'text/css;charset=utf-8')
         response.write(`
-        body{backgound - color: #ddd;}
+        body{backgound-color: #ddd;}
         h1{color: red}
     `)
         response.end()
